@@ -1,5 +1,8 @@
 # Galagino - ESP32 Arcade Emulator
 
+TLDR: Updated to build on the ESP32 CYD-2USB version of the CYD
+Also added in Nintendo Classic controller (Gamepad) to the controls
+
 Play Galaga, Pac-Man, Donkey Kong, Frogger, Digdug and 1942 on the ESP32
 
 ![Cabinet](images/galagino_cabinet.jpg)
