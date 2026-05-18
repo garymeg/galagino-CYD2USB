@@ -900,6 +900,26 @@ unsigned char buttons_get(void) {
 #ifndef SINGLE_MACHINE
   static unsigned long reset_timer = 0;
   
+#ifdef NUNCHUCK_INPUT
+#ifdef USE_GAMEPAD
+  // Check for Home button press on gamepad (immediate menu return)
+  extern volatile boolean gamepad_home_pressed;
+  if(gamepad_home_pressed && machine != MCH_MENU) {
+    gamepad_home_pressed = false; // Clear flag
+    
+#ifdef MASTER_ATTRACT_GAME_TIMEOUT
+    master_attract_timeout = 0;
+#endif
+    
+#ifdef TFT_BL
+    digitalWrite(TFT_BL, LOW);
+#endif
+    
+    emulation_reset();
+  }
+#endif
+#endif
+  
   // reset if coin (or start if no coin is configured) is held for
   // more than 1 second
   if(input_states & BUTTON_EXTRA) {

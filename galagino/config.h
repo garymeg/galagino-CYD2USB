@@ -29,7 +29,7 @@
 
 #include "dip_switches.h"
 
-// #define CHEAP_YELLOW_DISPLAY_CONF
+#define CHEAP_YELLOW_DISPLAY_CONF
 
 #ifndef CHEAP_YELLOW_DISPLAY_CONF // Config as it was before
 
@@ -76,10 +76,10 @@
 #define TFT_DC 2
 #define TFT_RST -1
 #define TFT_BL 21   // don't set if backlight is hard wired
-#define TFT_ILI9341 // define for ili9341, otherwise st7789
+// #define TFT_ILI9341 // define for ili9341, otherwise st7789
 // #define TFT_VFLIP   // define for upside down
 
-// #define TFT_MAC  0x20  // some CYD need this to rotate properly and have correct colors
+ #define TFT_MAC  0x20  // some CYD need this to rotate properly and have correct colors
 
 // x and y offset of 224x288 pixels inside the 240x320 screen
 #define TFT_X_OFFSET 8
@@ -89,10 +89,12 @@
 #define LED_BRIGHTNESS 50 // range 0..255
 
 // audio config (leave both commented out for GPIO 25 for Audio)
+#define MASTER_VOLUME 64 // master volume scaler, default 64 (max), range 1-64
 // #define SND_DIFF   // set to output differential audio on GPIO25 _and_ inverted on GPIO26
 #define SND_LEFT_CHANNEL // Use GPIO 26 for audio
 
 #define NUNCHUCK_INPUT
+#define USE_GAMEPAD
 
 #define NUNCHUCK_SDA 22
 #define NUNCHUCK_SCL 27

@@ -11,6 +11,10 @@
 
 #include <stdio.h>    // for printf
 #include <string.h>   // for memcpy
+#include <Arduino.h>  // for millis() and micros()
+#include <esp_random.h>  // for esp_random()
+#include <freertos/FreeRTOS.h>  // for FreeRTOS types
+#include <freertos/task.h>  // for ulTaskNotifyTake() and vTaskDelay()
 
 #include "Z80.h"
 #include "config.h"

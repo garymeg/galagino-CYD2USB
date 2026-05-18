@@ -1,10 +1,19 @@
 #ifndef _I8048_H_
 #define _I8048_H_
 
-#define false 0
-#define true (!false)
+#include <stdbool.h>
 
-typedef char boolean;
+#ifndef boolean
+typedef bool boolean;
+#endif
+
+#ifndef false
+#define false 0
+#endif
+
+#ifndef true
+#define true (!false)
+#endif
 
 // Bits in PSW
 #define CY_BIT  7

@@ -101,7 +101,7 @@ static const uint8_t init_cmd[] = {
 #endif
   0x2a, 4, W16(0), W16(240),        // Column addr set, XSTART = 0, XEND = 240     
   0x2b, 4, W16(0), W16(320),        // Row addr set, YSTART = 0, YEND = 320
-  0x21, 0,                          // INV ON
+  0x20, 0,                          // INV ON
   0xff, 10,                         // 10 ms delay
   0x13, 0,                          // Normal display on
   0xff, 10,                         // 10 ms delay
