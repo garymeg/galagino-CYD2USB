@@ -93,8 +93,9 @@
 // #define SND_DIFF   // set to output differential audio on GPIO25 _and_ inverted on GPIO26
 #define SND_LEFT_CHANNEL // Use GPIO 26 for audio
 
+// Controls Config
 #define NUNCHUCK_INPUT
-#define USE_GAMEPAD
+#define USE_GAMEPAD // Use Nunchuck if Commented out
 
 #define NUNCHUCK_SDA 22
 #define NUNCHUCK_SCL 27
